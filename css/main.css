@@ -1,0 +1,65 @@
+:root {
+    --wh: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    height: var(--wh);
+}
+
+#alert-modal {
+    position: absolute;
+}
+
+#expl-overlay {
+    position: sticky;
+    height: 100%;
+}
+
+header {
+    height: 10%;
+    border: 1px solid red;
+}
+
+main {
+    height: 90%;
+    border: 1px dashed green;
+}
+
+img {
+    max-width: calc(var(--wh) * 0.03);
+}
+
+form {
+    margin: auto;
+    height: 90%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    place-items: center stretch;
+    border: 1px solid blue;
+}
+
+.input-section {
+    border: 1px solid;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, calc(var(--wh) * 0.04));
+    grid-template-rows: 1fr 1fr;
+}
+
+.copy-btn {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.input-field {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
