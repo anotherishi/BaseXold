@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Akaya+Kanadaka&family=Lobster+Two&family=Permanent+Marker&display=swap");
+
 :root {
     --wh: 100px;
 }
@@ -7,6 +9,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: monospace;
+    outline: none;
+}
+
+img {
+    user-select: none;
 }
 
 body {
@@ -23,35 +30,52 @@ body {
 }
 
 header {
-    height: 10%;
-    border: 1px solid red;
+    height: calc(var(--wh) * 0.07);
+    box-shadow: #0000006c 0 5px 20px;
+}
+
+header > h1,
+header > h1 > sub {
+    font-family: "Permanent Marker";
+    font-size: xx-large;
+}
+
+header > h1 {
+    margin-left: 5vw;
 }
 
 main {
-    height: 90%;
-    border: 1px dashed green;
+    height: calc(var(--wh) * 0.93);
+    background-color: #ffffff41;
 }
 
-img {
-    max-width: calc(var(--wh) * 0.03);
-}
 
 form {
     margin: auto;
-    height: 90%;
-    width: 90%;
+    height: 95%;
+    width: 92vw;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     place-items: center stretch;
-    border: 1px solid blue;
 }
 
 .input-section {
-    border: 1px solid;
     display: grid;
-    grid-template-columns: 1fr repeat(2, calc(var(--wh) * 0.04));
+    grid-template-columns: 1fr 0.2fr 0.2fr;
+    /* grid-template-columns: 1fr repeat(2, calc(var(--wh) * 0.04)); */
     grid-template-rows: 1fr 1fr;
+}
+
+.input-section > img {
+    max-width: calc(var(--wh) * 0.035);
+    margin: auto;
+}
+
+.input-heading {
+    margin-left: 2vw;
+    font-size: x-large;
+    font-family: "Lobster Two";
+    letter-spacing: 1px;
 }
 
 .copy-btn {
@@ -60,6 +84,23 @@ form {
 }
 
 .input-field {
+    margin-top: calc(var(--wh) * 0.005);
     grid-column-start: 1;
     grid-column-end: 4;
+    /* height: calc(var(--wh) * 0.04); */
+    border: 0.2rem dashed #000;
+    border-radius: 0.5rem;
+    padding: calc(var(--wh) * 0.01) 2vw;
+    font-weight: 600;
+    font-size: larger;
+    box-shadow: #0000006c 0 0 15px;
+    background-color: #eef0e781;
 }
+
+@media only screen and (min-width: 768px) {
+    form {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4vw;
+    }
+}
+

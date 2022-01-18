@@ -1,8 +1,16 @@
-window.onload = screen.orientation.onchange = function () {
+onload = screen.orientation.onchange = function () {
     // alert(window.innerHeight)
     let height = innerHeight;
     document.documentElement.style.cssText = `--wh: ${height}px;`;
+
+    // background
+    document.body.style.backgroundImage = new Trianglify({
+        x_gradient: Trianglify.colorbrewer,
+        noiseIntensity: 0.2,
+        cellsize: 30,
+    }).generate(innerWidth, innerHeight).dataUrl;
 };
+
 
 const numberSystems = ["Binary", "Octal", "Decimal", "HexaDecimal"];
 
@@ -72,7 +80,7 @@ function createUI(element) {
                                     number
                                 );
                         }
-                    }); 
+                    });
                 } else if (
                     inputEvent.inputType === "insertText" ||
                     inputEvent.inputType === "insertFromPaste"
