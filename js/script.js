@@ -1,14 +1,14 @@
 onload = screen.orientation.onchange = function () {
     // alert(window.innerHeight)
     let height = innerHeight;
-    document.documentElement.style.cssText = `--wh: ${height}px;`;
+    document.documentElement.style.setProperty('--wh', height+'px');
 
     // background
-    document.body.style.backgroundImage = new Trianglify({
-        x_gradient: Trianglify.colorbrewer,
-        noiseIntensity: 0.2,
-        cellsize: 30,
-    }).generate(innerWidth, innerHeight).dataUrl;
+    // document.body.style.backgroundImage = new Trianglify({
+    //     x_gradient: Trianglify.colorbrewer,
+    //     noiseIntensity: 0,
+    //     cellsize: 100,
+    // }).generate(innerWidth, innerHeight).dataUrl;
 };
 
 

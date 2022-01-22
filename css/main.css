@@ -29,34 +29,69 @@ body {
     height: 100%;
 }
 
-header {
+
+
+
+
+
+#header {
     height: calc(var(--wh) * 0.07);
-    box-shadow: #0000006c 0 5px 20px;
+    /* box-shadow: #0000006c 0 5px 20px; */
 }
 
-header > h1,
-header > h1 > sub {
+#header > h1,
+#header > h1 > sub {
     font-family: "Permanent Marker";
-    font-size: xx-large;
+    font-size: calc(var(--wh) * 0.05);
+    font-weight: 400;
 }
 
-header > h1 {
-    margin-left: 5vw;
+#header > h1 {
+    margin-left: 8vw;
 }
 
 main {
-    height: calc(var(--wh) * 0.93);
-    background-color: #ffffff41;
+    height: var(--wh);
+    /* background-color: #ffffff41; */
+
+
+    /* background: linear-gradient(to bottom right, #141c3f, #0e142e); */
+    /* background-image: url(https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/12/Gradient_builder_2.jpg?auto=format&q=60&w=1815&h=1020.9375&fit=crop&crop=faces); */
+    background-image: url(https://i.pinimg.com/originals/37/19/eb/3719ebdbfc5497a68688ec7604b6d440.jpg);
+    /* background-image: url(https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/12/Gradient_builder_2.jpg?auto=format&q=60&w=1815&h=1020.9375&fit=crop&crop=faces); */
+    background-size: 100% 110%;
 }
+
+.circle {
+    border-radius: 50%;
+    position: absolute;
+}
+
+#c1 {
+    top: 45%;
+    left: -20px;
+    height: 20vh;
+    width: 20vh;
+    background-image: linear-gradient(90deg, #f4a2ffc9, #db5493d3);
+}
+#c2 {
+    top: 10%;
+    left: -10px;
+    height: 80px;
+    /* width: 80px; */
+    background-image: linear-gradient(to top right, #cdee72, #71ff71);
+}
+
 
 
 form {
     margin: auto;
-    height: 95%;
+    height: 85%;
     width: 92vw;
     display: grid;
     grid-template-columns: 1fr;
     place-items: center stretch;
+    z-index: 2;
 }
 
 .input-section {
@@ -64,6 +99,14 @@ form {
     grid-template-columns: 1fr 0.2fr 0.2fr;
     /* grid-template-columns: 1fr repeat(2, calc(var(--wh) * 0.04)); */
     grid-template-rows: 1fr 1fr;
+
+
+    border-radius: 1rem;
+    background-color: #ffffff3f;
+    border: 2px solid #ffffff10;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    z-index: 4;
 }
 
 .input-section > img {
@@ -73,7 +116,7 @@ form {
 
 .input-heading {
     margin-left: 2vw;
-    font-size: x-large;
+    font-size: large;
     font-family: "Lobster Two";
     letter-spacing: 1px;
 }
@@ -92,8 +135,8 @@ form {
     border-radius: 0.5rem;
     padding: calc(var(--wh) * 0.01) 2vw;
     font-weight: 600;
-    font-size: larger;
-    box-shadow: #0000006c 0 0 15px;
+    font-size: medium;
+    /* box-shadow: #0000006c 0 0 15px; */
     background-color: #eef0e781;
 }
 

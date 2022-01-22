@@ -11703,16 +11703,16 @@ function Trianglify(f) {
         document.body.appendChild(this.svg);
     }),
     (Trianglify.colorbrewer = [
-                "#9e0142",
+                "#d20a5d",
                 "#d53e4f",
-                "#f46d43",
+                "#f06134",
                 "#fdae61",
                 "#fee08b",
-                "#e6f598",
-                "#abdda4",
-                "#66c2a5",
-                "#3288bd",
-                "#5e4fa2",
+                "#e8ff6e",
+                "#6deb5c",
+                "#49d7aa",
+                "#3da4e3",
+                "#6a59ba",
             ]
         
     );
