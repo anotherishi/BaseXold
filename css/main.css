@@ -10,6 +10,7 @@
     box-sizing: border-box;
     font-family: monospace;
     outline: none;
+    color: #001f1c;
 }
 
 img {
@@ -18,6 +19,7 @@ img {
 
 body {
     height: var(--wh);
+    overflow: hidden;
 }
 
 #alert-modal {
@@ -30,12 +32,11 @@ body {
 }
 
 
-
-
-
-
 #header {
     height: calc(var(--wh) * 0.07);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     /* box-shadow: #0000006c 0 5px 20px; */
 }
 
@@ -50,6 +51,24 @@ body {
     margin-left: 8vw;
 }
 
+#options-btn {
+    width: calc(var(--wh) * 0.05);
+    height: calc(var(--wh) * 0.05);
+    margin-right: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#options-btn > div {
+    height: calc(var(--wh) * 0.005);
+    width: 100%;
+    background-color: #ff469c;
+    border-radius: 1rem;
+}
+
+
 main {
     height: var(--wh);
     /* background-color: #ffffff41; */
@@ -58,13 +77,13 @@ main {
     /* background: linear-gradient(to bottom right, #141c3f, #0e142e); */
     /* background-image: url(https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/12/Gradient_builder_2.jpg?auto=format&q=60&w=1815&h=1020.9375&fit=crop&crop=faces); */
     background-image: url(https://i.pinimg.com/originals/37/19/eb/3719ebdbfc5497a68688ec7604b6d440.jpg);
-    /* background-image: url(https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/12/Gradient_builder_2.jpg?auto=format&q=60&w=1815&h=1020.9375&fit=crop&crop=faces); */
-    background-size: 100% 110%;
+    background-size: 100% 100%;
 }
 
 .circle {
     border-radius: 50%;
     position: absolute;
+    /* border: 2px solid #ffffff38; */
 }
 
 #c1 {
@@ -75,13 +94,19 @@ main {
     background-image: linear-gradient(90deg, #f4a2ffc9, #db5493d3);
 }
 #c2 {
-    top: 10%;
-    left: -10px;
+    top: 20%;
+    right: 10px;
     height: 80px;
-    /* width: 80px; */
-    background-image: linear-gradient(to top right, #cdee72, #71ff71);
+    width: 80px;
+    background-image: linear-gradient(0.1turn, #72eeee, #9271ff);
 }
-
+#c3 {
+    bottom: -30px;
+    left: 40%;
+    height: 100px;
+    width: 100px;
+    background-image: linear-gradient(0.3turn, #ffbef4, #fffd71);
+}
 
 
 form {
@@ -102,10 +127,10 @@ form {
 
 
     border-radius: 1rem;
-    background-color: #ffffff3f;
-    border: 2px solid #ffffff10;
+    background-color: #6d6d6d18;
+    border: 2px solid rgba(255, 255, 255, 0.123);
     padding: 1rem 2rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px) saturate(120%);
     z-index: 4;
 }
 

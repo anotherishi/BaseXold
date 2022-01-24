@@ -1,7 +1,11 @@
 onload = screen.orientation.onchange = function () {
-    // alert(window.innerHeight)
     let height = innerHeight;
-    document.documentElement.style.setProperty('--wh', height+'px');
+    document.documentElement.style.setProperty("--wh", height + "px");
+    // alert("orientation change");
+
+    // screen.orientation.addEventListener("change", function (e) {
+    //     alert("hi");
+    // });
 
     // background
     // document.body.style.backgroundImage = new Trianglify({
@@ -10,7 +14,6 @@ onload = screen.orientation.onchange = function () {
     //     cellsize: 100,
     // }).generate(innerWidth, innerHeight).dataUrl;
 };
-
 
 const numberSystems = ["Binary", "Octal", "Decimal", "HexaDecimal"];
 
