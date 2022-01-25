@@ -1,3 +1,4 @@
+// deno-lint-ignore-file
 onload = screen.orientation.onchange = function () {
     let height = innerHeight;
     document.documentElement.style.setProperty("--wh", height + "px");

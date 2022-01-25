@@ -17,7 +17,7 @@ img {
     user-select: none;
 }
 
-body {
+html, body {
     height: var(--wh);
     overflow: hidden;
 }
@@ -157,7 +157,7 @@ form {
     grid-column-end: 4;
     /* height: calc(var(--wh) * 0.04); */
     border: 0.2rem dashed #000;
-    border-radius: 0.5rem;
+    border-radius: 0.7rem;
     padding: calc(var(--wh) * 0.01) 2vw;
     font-weight: 600;
     font-size: medium;

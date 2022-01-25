@@ -1,0 +1,26 @@
+#expl-overlay {
+    position: fixed;
+    width: 100%;
+    height: var(--wh);
+    z-index: 5;
+    display: grid;
+    place-items: center ;
+    background-color: #6d6d6d42;
+}
+
+#expl-modal {
+    width: 80vw;
+    border: 2px solid #bebebe52;
+    background-color: #ffffff80;
+    border-radius: 2rem;
+    transition: height ease-in 3s;
+    backdrop-filter: blur(10px) saturate(120%);
+}
+
+#expl-header {
+    display: flex;
+}
+
+#expl-title {
+    width: 100%;
+}
